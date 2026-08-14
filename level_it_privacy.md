@@ -1,3 +1,8 @@
+---
+layout: default
+title: Level-It Tool - Privacy Policy
+---
+
 # Level-It Tool - Privacy Policy
 
 **Last Updated:** June 23, 2026

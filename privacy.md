@@ -1,3 +1,8 @@
+---
+layout: default
+title: Synapse Grid - Privacy Policy
+---
+
 # Synapse Grid - Privacy Policy
 
 **Last Updated:** June 22, 2026
