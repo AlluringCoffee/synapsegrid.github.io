@@ -33,7 +33,7 @@ Your bike lays a neon trail. That trail becomes the arena — weapon and prison.
 | **Team** | Solo indie |
 | **Location** | Toronto |
 | **Status** | In development |
-| **Store** | Steam Coming Soon is not live yet (no App ID). |
+| **Store** | Paid Steam release. Coming Soon page not live yet (no App ID). No free download. |
 | **Public page** | https://alluringcoffee.github.io/synapsegrid.github.io/ |
 
 Do **not** list alluring.coffee as the game homepage (that is a Hytale community server).

@@ -3,6 +3,8 @@
 ![Synapse Grid](https://img.shields.io/badge/Status-In%20Development-blue)
 ![Platform](https://img.shields.io/badge/Platform-Steam-black)
 
+> **⚠️ Marketing Only**: This repository is **marketing only** (landing page + press kit + stills). The game binary and source are **not** in this repo and are **not free**. Commercial product, all rights reserved.
+
 **Synapse Grid** is neon bike combat. Lay a wall, ride the green ones, die on amber.
 
 This repository hosts the public landing page for Synapse Grid: Neon Bike Combat, a solo indie game built with Godot by Timothy Bunce (AlluringCoffee).
