@@ -5,27 +5,36 @@ title: Synapse Grid - Privacy Policy
 
 # Synapse Grid - Privacy Policy
 
-**Last Updated:** June 22, 2026
+**Last Updated:** August 18, 2026
 
-Welcome to Synapse Grid. Your privacy is important to us. This Privacy Policy explains what data we collect, why we collect it, and how it is used.
+Synapse Grid: Neon Bike Combat is a **paid PC game** sold on Steam by Timothy Bunce / AlluringCoffee. This policy covers that game. It is not a free download, and it is not currently distributed on Google Play.
 
-## 1. Information Collection and Use
+## 1. What this game stores
 
-**Google Play Data & Advertising**
-We use standard analytics and advertising services provided by Google (e.g., Google Play Services, AdMob). These services may collect **Device or other IDs** for the purpose of serving personalized or non-personalized advertisements, as well as for tracking app performance and crash reports. We do not explicitly collect, store, or sell any personal identifying information (like your name or email address) on our own servers. 
+**Local data.** The game saves progress, scores, settings, and similar play data on your computer. That data stays on your device unless you move or back up the files yourself.
 
-**Local Data**
-Synapse Grid saves your progression (scores, unlocked missions, and game settings) locally on your device. This data is not transmitted to us.
+**We do not run ads in this game.** There is no AdMob, no Google Play Services, and no in-game advertising SDK.
 
-## 2. Children's Privacy
-Synapse Grid does not knowingly collect personally identifiable information from children under 13. The app's target audience is 13+, and the game does not specifically appeal to young children.
+**We do not collect accounts on our own servers.** We do not operate a Synapse Grid login, and we do not sell your personal information.
 
-## 3. Third-Party Services
-The app uses third-party services that may collect information used to identify you.
-- [Google Play Services Privacy Policy](https://policies.google.com/privacy)
+## 2. Steam
 
-## 4. Changes to This Privacy Policy
-We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. Changes are effective immediately upon posting.
+If you buy and play the game on Steam, Valve may collect information as described in [Steam's Privacy Policy](https://store.steampowered.com/privacy_agreement/). That includes things Steam normally handles (purchases, Steam Cloud if we enable it later, crash/report tools Steam provides). We do not get a separate copy of your payment details.
 
-## 5. Contact Us
-If you have any questions or suggestions about our Privacy Policy, please contact the developer via the support email listed on the Google Play Store.
+A Steam store page is not live yet (no App ID). When it is, this policy still applies.
+
+## 3. Children
+
+Synapse Grid is intended for players 13 and older. We do not knowingly collect personal information from children under 13.
+
+## 4. This website
+
+The public page at [alluringcoffee.github.io/synapsegrid.github.io](https://alluringcoffee.github.io/synapsegrid.github.io/) is a storefront and press page hosted on GitHub Pages. It does not offer a game download. GitHub's hosting is covered by GitHub's own policies.
+
+## 5. Changes
+
+We may update this policy. The "Last Updated" date above is the current version.
+
+## 6. Contact
+
+Questions: Timothy Bunce / AlluringCoffee, via the [public game page](https://alluringcoffee.github.io/synapsegrid.github.io/) or the [press kit](https://alluringcoffee.github.io/synapsegrid.github.io/press.html).
