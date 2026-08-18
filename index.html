@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Grid - Neon Bike Combat</title>
+    <meta name="description" content="Synapse Grid is neon bike combat. Lay a wall, ride the green ones, die on amber.">
+    <meta property="og:title" content="Synapse Grid - Neon Bike Combat">
+    <meta property="og:description" content="Synapse Grid is neon bike combat. Lay a wall, ride the green ones, die on amber.">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 50%, #0f0a1a 100%);
+            color: #e0e0ff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 50%, #ff00ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(0, 255, 136, 0.3);
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #00ccff;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #b0b0d0;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            margin: 3rem 0 4rem;
+            text-align: center;
+        }
+
+        .steam-cta {
+            display: inline-block;
+            padding: 18px 48px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px rgba(0, 255, 136, 0.3);
+            transition: all 0.3s ease;
+            cursor: not-allowed;
+            opacity: 0.7;
+            border: none;
+            position: relative;
+        }
+
+        .steam-cta.disabled {
+            background: linear-gradient(135deg, #444 0%, #666 100%);
+            box-shadow: 0 8px 32px rgba(100, 100, 100, 0.2);
+        }
+
+        .steam-cta:not(.disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 255, 136, 0.5);
+        }
+
+        .steam-placeholder {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Steam URL placeholder comment for easy editing */
+        /* 🎮 STEAM STORE URL GOES HERE 🎮
+           When Steam App ID is available, replace the disabled button above with:
+           <a href="https://store.steampowered.com/app/YOUR_APP_ID" class="steam-cta" target="_blank" rel="noopener">
+               Wishlist on Steam
+           </a>
+        */
+
+        .gameplay-section {
+            background: rgba(26, 10, 46, 0.4);
+            border: 2px solid rgba(0, 255, 136, 0.2);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            box-shadow: 0 8px 32px rgba(0, 255, 136, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #00ff88;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .gameplay-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gameplay-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .gameplay-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .gameplay-item h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #00ccff;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .gameplay-item p {
+            color: #b0b0d0;
+            line-height: 1.6;
+        }
+
+        .screenshots-section {
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .screenshot-placeholder {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 204, 255, 0.1) 100%);
+            border: 2px solid rgba(0, 255, 136, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-placeholder:hover {
+            border-color: rgba(0, 255, 136, 0.6);
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.15) 0%, rgba(0, 204, 255, 0.15) 100%);
+        }
+
+        .about-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            color: #b0b0d0;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            line-height: 1.8;
+        }
+
+        .indie-badge {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 8px 20px;
+            background: rgba(255, 0, 255, 0.2);
+            border: 1px solid rgba(255, 0, 255, 0.4);
+            border-radius: 20px;
+            color: #ff00ff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 3rem 0 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #00ccff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00ff88;
+        }
+
+        .footer-text {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .gameplay-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SYNAPSE GRID</h1>
+            <div class="subtitle">Neon Bike Combat</div>
+            <p class="tagline">Lay a wall, ride the green ones, die on amber.</p>
+        </header>
+
+        <div class="cta-section">
+            <button class="steam-cta disabled" disabled>
+                Wishlist on Steam — Page Coming Soon
+            </button>
+            <div class="steam-placeholder">
+                🎮 Steam store page in development
+            </div>
+        </div>
+
+        <section class="gameplay-section">
+            <h2>How It Plays</h2>
+            <div class="gameplay-grid">
+                <div class="gameplay-item">
+                    <span class="gameplay-icon">🏍️</span>
+                    <h3>Lay Your Wall</h3>
+                    <p>Your bike leaves a neon trail behind you. This trail becomes the arena—your weapon and your prison.</p>
+                </div>
+                <div class="gameplay-item">
+                    <span class="gameplay-icon">🟢</span>
+                    <h3>Ride the Green</h3>
+                    <p>Green trails are rideable surfaces. Master them, use them, dominate the grid.</p>
+                </div>
+                <div class="gameplay-item">
+                    <span class="gameplay-icon">🟠</span>
+                    <h3>Die on Amber</h3>
+                    <p>Amber marks the death line—the lethal edge of your lane. Touch it, and you're out.</p>
+                </div>
+                <div class="gameplay-item">
+                    <span class="gameplay-icon">⚡</span>
+                    <h3>Pierce Through</h3>
+                    <p>Break the grid, cut through walls, create new paths. Strategy meets reflex in neon combat.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshots-section">
+            <h2>Witness the Grid</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-placeholder">
+                    Screenshot Coming Soon
+                </div>
+                <div class="screenshot-placeholder">
+                    Screenshot Coming Soon
+                </div>
+                <div class="screenshot-placeholder">
+                    Screenshot Coming Soon
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <p>
+                <strong>Synapse Grid</strong> is a neon light-cycle racer where the trail you lay becomes the arena. 
+                Navigate the grid, master the walls, and survive the amber death lines in this intense solo combat experience.
+            </p>
+            <p>
+                Built with passion in Godot, this is a high-speed game of reflexes, strategy, and neon chaos.
+            </p>
+            <div class="indie-badge">Solo Indie Development</div>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="privacy.html">Synapse Grid Privacy Policy</a>
+                <a href="level_it_privacy.html">Level-It Tool Privacy Policy</a>
+            </div>
+            <p class="footer-text">
+                &copy; 2026 Timothy Bunce / AlluringCoffee. All rights reserved.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
