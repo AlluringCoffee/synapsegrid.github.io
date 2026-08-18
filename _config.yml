@@ -1,0 +1,9 @@
+title: Synapse Grid
+description: Synapse Grid is neon bike combat. Lay a wall, ride the green ones, die on amber.
+theme: jekyll-theme-minimal
+
+# Exclude unnecessary files from the build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
