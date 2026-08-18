@@ -198,6 +198,15 @@
             background: linear-gradient(135deg, rgba(0, 255, 136, 0.15) 0%, rgba(0, 204, 255, 0.15) 100%);
         }
 
+        .screenshot {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid rgba(0, 255, 136, 0.3);
+            display: block;
+        }
+
         .about-section {
             text-align: center;
             margin: 3rem 0;
@@ -323,15 +332,9 @@
         <section class="screenshots-section">
             <h2>Witness the Grid</h2>
             <div class="screenshots-grid">
-                <div class="screenshot-placeholder">
-                    Screenshot Coming Soon
-                </div>
-                <div class="screenshot-placeholder">
-                    Screenshot Coming Soon
-                </div>
-                <div class="screenshot-placeholder">
-                    Screenshot Coming Soon
-                </div>
+                <img class="screenshot" src="assets/alongside.png" alt="Synapse Grid bike riding alongside a neon trail">
+                <img class="screenshot" src="assets/trail.png" alt="Light-cycle laying a neon wall on the grid">
+                <img class="screenshot" src="assets/corridor.png" alt="Neon wall corridor in Synapse Grid">
             </div>
         </section>
 
