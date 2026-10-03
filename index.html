@@ -94,36 +94,15 @@
             border-radius: 50px;
             box-shadow: 0 8px 32px rgba(0, 255, 136, 0.3);
             transition: all 0.3s ease;
-            cursor: not-allowed;
-            opacity: 0.7;
+            cursor: pointer;
             border: none;
             position: relative;
         }
 
-        .steam-cta.disabled {
-            background: linear-gradient(135deg, #444 0%, #666 100%);
-            box-shadow: 0 8px 32px rgba(100, 100, 100, 0.2);
-        }
-
-        .steam-cta:not(.disabled):hover {
+        .steam-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 40px rgba(0, 255, 136, 0.5);
         }
-
-        .steam-placeholder {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: #888;
-            font-style: italic;
-        }
-
-        /* Steam URL placeholder comment for easy editing */
-        /* 🎮 STEAM STORE URL GOES HERE 🎮
-           When Steam App ID is available, replace the disabled button above with:
-           <a href="https://store.steampowered.com/app/YOUR_APP_ID" class="steam-cta" target="_blank" rel="noopener">
-               Wishlist on Steam
-           </a>
-        */
 
         .gameplay-section {
             background: rgba(26, 10, 46, 0.4);
@@ -305,12 +284,9 @@
         </header>
 
         <div class="cta-section">
-            <button class="steam-cta disabled" disabled>
-                Wishlist on Steam — Page Coming Soon
-            </button>
-            <div class="steam-placeholder">
-                🎮 Steam store page in development
-            </div>
+            <a href="https://store.steampowered.com/app/5179670/" class="steam-cta" target="_blank" rel="noopener">
+                Wishlist on Steam
+            </a>
             <p style="margin-top: 2rem; color: #b0b0d0; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                 <strong>Paid game on Steam.</strong> This page is a storefront. There is no free download here.
             </p>
